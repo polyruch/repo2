@@ -1,17 +1,19 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { createContext, useContext, useState, useEffect } from "react"
+import type React from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
-type Language = "en" | "fr"
+type Language = "en" | "fr";
 
 interface LanguageContextType {
-  language: Language
-  setLanguage: (lang: Language) => void
-  t: (key: string) => string
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: (key: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
 const translations = {
   en: {
@@ -26,11 +28,11 @@ const translations = {
     "nav.portfolio": "Portfolio",
 
     // Hero Section
-    "hero.greeting": "Hi, I'm",
-    "hero.name": "Tabet Khalil",
+    "hero.greeting": "Hi, I am",
+    "hero.name": "Khalil",
     "hero.role.developer": "Developer",
     "hero.role.designer": "Designer",
-    "hero.freelance": "Freelance Web",
+    "hero.freelance": "A Freelance Web",
     "hero.description": "crafting beautiful, functional digital experiences",
     "hero.viewWork": "View My Work",
     "hero.getInTouch": "Get In Touch",
@@ -38,18 +40,20 @@ const translations = {
     // About Section
     "about.title": "About Me",
     "about.description1":
-      "I'm a passionate freelance web developer and designer with over 4 years of experience creating digital solutions that combine beautiful design with powerful functionality. I specialize in modern web technologies and love bringing ideas to life through code.",
+      "Hi, my name is Tabet Khalil, a freelance web developer and designer, passionate about building clean, modern, and fast websites. I specialize in Next.js and Strapi CMS solutions crafting digital experiences that are not only beautiful but also optimized for performance and user experience.",
     "about.description2":
-      "When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or sharing knowledge with the developer community.",
+      "When I’m not coding, you’ll probably find me at the gym, solving complex puzzles, or working on personal side projects",
 
     // Skills Section
     "skills.title": "Skills & Expertise",
-    "skills.description": "Here are the technologies and tools I work with to bring your ideas to life",
+    "skills.description":
+      "Here are the technologies and tools I work with to bring your ideas to life",
     "skills.proficiency": "Proficiency",
 
     // Education Section
     "education.title": "Education",
-    "education.description": "My educational background and continuous learning journey",
+    "education.description":
+      "My educational background and continuous learning journey",
     "education.degree1": "Master's Degree in Operations Research",
     "education.school1": "University of Boumerdes (UMBB)",
     "education.desc1":
@@ -69,30 +73,35 @@ const translations = {
 
     // Work Section
     "work.title": "My Work",
-    "work.description": "Here are some of my recent projects that showcase my skills and creativity",
+    "work.description":
+      "Here are some of my recent projects that showcase my skills and creativity",
     "work.project1.title": "E-Commerce Platform",
-    "work.project1.description": "Full-stack e-commerce solution with payment integration and admin dashboard",
+    "work.project1.description":
+      "Full-stack e-commerce solution with payment integration and admin dashboard",
     "work.project2.title": "Task Management App",
-    "work.project2.description": "Collaborative project management tool with real-time updates",
+    "work.project2.description":
+      "Collaborative project management tool with real-time updates",
     "work.project3.title": "Portfolio Website",
-    "work.project3.description": "Modern portfolio website with animations and responsive design",
+    "work.project3.description":
+      "Modern portfolio website with animations and responsive design",
     "work.code": "Code",
     "work.liveDemo": "Live Demo",
 
     // Services Section
     "services.title": "My Services",
-    "services.description": "I offer comprehensive web development solutions tailored to your business needs",
+    "services.description":
+      "I offer comprehensive web development solutions tailored to your business needs",
     "services.service1.title": "Custom Website Development",
     "services.service1.description":
-      "Tailored websites built from scratch using modern technologies like React, Next.js, and TypeScript. Perfect for businesses looking for unique, high-performance web solutions.",
+      "Tailored websites built from scratch using modern technologies like React, Next.js, and TailwindCss. Perfect for businesses looking for unique, high-performance web solutions.",
     "services.service1.feature1": "Responsive Design",
     "services.service1.feature2": "Modern Technologies",
     "services.service1.feature3": "SEO Optimized",
     "services.service1.feature4": "Fast Loading",
     "services.service2.title": "E-Commerce Websites",
     "services.service2.description":
-      "Complete e-commerce solutions with payment integration, inventory management, and user-friendly shopping experiences. Built to convert visitors into customers.",
-    "services.service2.feature1": "Payment Integration",
+      "Complete e-commerce solutions with inventory management and user-friendly shopping experiences. Built to convert visitors into customers.",
+    "services.service2.feature1": "Modern Design",
     "services.service2.feature2": "Inventory Management",
     "services.service2.feature3": "Admin Dashboard",
     "services.service2.feature4": "Mobile Optimized",
@@ -119,17 +128,19 @@ const translations = {
     "testimonials.client2.company": "Digital Solutions Co.",
     "testimonials.client2.text":
       "Working with Khalil was a game-changer for our business. He transformed our outdated website into a modern, responsive platform that truly represents our brand. The optimization work he did improved our page speed by 60%.",
-    "testimonials.client3.name": "Emma Rodriguez",
-    "testimonials.client3.role": "CEO",
-    "testimonials.client3.company": "Creative Agency",
-    "testimonials.client3.text":
-      "Khalil's expertise in both development and design is remarkable. He created a custom website that perfectly captures our creative vision while maintaining excellent performance. I highly recommend his services to anyone looking for quality web development.",
+    // "testimonials.client3.name": "Emma Rodriguez",
+    // "testimonials.client3.role": "CEO",
+    // "testimonials.client3.company": "Creative Agency",
+    // "testimonials.client3.text":
+    //   "Khalil's expertise in both development and design is remarkable. He created a custom website that perfectly captures our creative vision while maintaining excellent performance. I highly recommend his services to anyone looking for quality web development.",
 
     // Contact Section
     "contact.title": "Get In Touch",
-    "contact.description": "Ready to start your next project? Let's discuss how I can help bring your ideas to life.",
+    "contact.description":
+      "Ready to start your next project? Let's discuss how I can help bring your ideas to life.",
     "contact.connect": "Let's Connect",
-    "contact.connectDescription": "Feel free to reach out through any of these channels",
+    "contact.connectDescription":
+      "Feel free to reach out through any of these channels",
     "contact.email": "Email",
     "contact.phone": "Phone",
     "contact.location": "Location",
@@ -165,7 +176,8 @@ const translations = {
     "hero.role.developer": "Développeur",
     "hero.role.designer": "Designer",
     "hero.freelance": "Web",
-    "hero.description": "créant des expériences numériques belles et fonctionnelles",
+    "hero.description":
+      "créant des expériences numériques belles et fonctionnelles",
     "hero.viewWork": "Voir Mon Travail",
     "hero.getInTouch": "Me Contacter",
 
@@ -178,12 +190,14 @@ const translations = {
 
     // Skills Section
     "skills.title": "Compétences & Expertise",
-    "skills.description": "Voici les technologies et outils avec lesquels je travaille pour donner vie à vos idées",
+    "skills.description":
+      "Voici les technologies et outils avec lesquels je travaille pour donner vie à vos idées",
     "skills.proficiency": "Maîtrise",
 
     // Education Section
     "education.title": "Formation",
-    "education.description": "Mon parcours éducatif et mon apprentissage continu",
+    "education.description":
+      "Mon parcours éducatif et mon apprentissage continu",
     "education.degree1": "Master en Recherche Opérationnelle",
     "education.school1": "Université de Boumerdès (UMBB)",
     "education.desc1":
@@ -206,11 +220,14 @@ const translations = {
     "work.description":
       "Voici quelques-uns de mes projets récents qui mettent en valeur mes compétences et ma créativité",
     "work.project1.title": "Plateforme E-Commerce",
-    "work.project1.description": "Solution e-commerce full-stack avec intégration de paiement et tableau de bord admin",
+    "work.project1.description":
+      "Solution e-commerce full-stack avec intégration de paiement et tableau de bord admin",
     "work.project2.title": "App de Gestion de Tâches",
-    "work.project2.description": "Outil de gestion de projet collaboratif avec mises à jour en temps réel",
+    "work.project2.description":
+      "Outil de gestion de projet collaboratif avec mises à jour en temps réel",
     "work.project3.title": "Site Web Portfolio",
-    "work.project3.description": "Site web portfolio moderne avec animations et design responsive",
+    "work.project3.description":
+      "Site web portfolio moderne avec animations et design responsive",
     "work.code": "Code",
     "work.liveDemo": "Démo Live",
 
@@ -255,18 +272,19 @@ const translations = {
     "testimonials.client2.company": "Digital Solutions Co.",
     "testimonials.client2.text":
       "Travailler avec Khalil a été un tournant pour notre entreprise. Il a transformé notre site web obsolète en une plateforme moderne et responsive qui représente vraiment notre marque. Le travail d'optimisation qu'il a fait a amélioré notre vitesse de page de 60%.",
-    "testimonials.client3.name": "Emma Rodriguez",
-    "testimonials.client3.role": "PDG",
-    "testimonials.client3.company": "Creative Agency",
-    "testimonials.client3.text":
-      "L'expertise de Khalil en développement et en design est remarquable. Il a créé un site web personnalisé qui capture parfaitement notre vision créative tout en maintenant d'excellentes performances. Je recommande vivement ses services à quiconque recherche un développement web de qualité.",
+    // "testimonials.client3.name": "Emma Rodriguez",
+    // "testimonials.client3.role": "PDG",
+    // "testimonials.client3.company": "Creative Agency",
+    // "testimonials.client3.text":
+    //   "L'expertise de Khalil en développement et en design est remarquable. Il a créé un site web personnalisé qui capture parfaitement notre vision créative tout en maintenant d'excellentes performances. Je recommande vivement ses services à quiconque recherche un développement web de qualité.",
 
     // Contact Section
     "contact.title": "Me Contacter",
     "contact.description":
       "Prêt à commencer votre prochain projet ? Discutons de la façon dont je peux vous aider à donner vie à vos idées.",
     "contact.connect": "Connectons-nous",
-    "contact.connectDescription": "N'hésitez pas à me contacter par l'un de ces canaux",
+    "contact.connectDescription":
+      "N'hésitez pas à me contacter par l'un de ces canaux",
     "contact.email": "Email",
     "contact.phone": "Téléphone",
     "contact.location": "Localisation",
@@ -285,38 +303,44 @@ const translations = {
     "accessibility.toggleTheme": "Basculer le thème",
     "accessibility.toggleLanguage": "Changer de langue",
   },
-}
+};
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en")
+  const [language, setLanguage] = useState<Language>("en");
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("language") as Language
+    const savedLanguage = localStorage.getItem("language") as Language;
     if (savedLanguage && (savedLanguage === "en" || savedLanguage === "fr")) {
-      setLanguage(savedLanguage)
+      setLanguage(savedLanguage);
     }
-  }, [])
+  }, []);
 
   const handleSetLanguage = (lang: Language) => {
-    setLanguage(lang)
-    localStorage.setItem("language", lang)
-  }
+    setLanguage(lang);
+    localStorage.setItem("language", lang);
+  };
 
   const t = (key: string): string => {
-    return translations[language][key as keyof (typeof translations)[typeof language]] || key
-  }
+    return (
+      translations[language][
+        key as keyof (typeof translations)[typeof language]
+      ] || key
+    );
+  };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
+    <LanguageContext.Provider
+      value={{ language, setLanguage: handleSetLanguage, t }}
+    >
       {children}
     </LanguageContext.Provider>
-  )
+  );
 }
 
 export function useLanguage() {
-  const context = useContext(LanguageContext)
+  const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error("useLanguage must be used within a LanguageProvider")
+    throw new Error("useLanguage must be used within a LanguageProvider");
   }
-  return context
+  return context;
 }
