@@ -174,7 +174,7 @@ const translations = {
     "hero.role": "Développeur et Designer Web",
     "hero.freelance": "Web",
     "hero.description":
-      "créant des expériences numériques belles et fonctionnelles",
+      "J’aide les personnes et les marques à créer leur site web et à améliorer leur présence en ligne.",
     "hero.viewWork": "Voir Mon Travail",
     "hero.getInTouch": "Me Contacter",
 

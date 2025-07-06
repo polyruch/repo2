@@ -47,6 +47,9 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 94.1%;
   }
+  .theme {
+    --animate-pulse: pulse var(--duration) ease-out infinite;
+  }
 }
 
 @layer base {
@@ -264,5 +267,16 @@ img {
   select {
     max-width: 100%;
     width: 100%;
+  }
+}
+
+@theme inline {
+  @keyframes pulse {
+  0%, 100% {
+    boxShadow: 0 0 0 0 var(--pulse-color);
+    }
+  50% {
+    boxShadow: 0 0 0 8px var(--pulse-color);
+    }
   }
 }

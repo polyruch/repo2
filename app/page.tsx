@@ -41,11 +41,9 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { TypingEffect } from "@/components/typing-effect";
 import { useLanguage } from "@/contexts/language-context";
 import { LanguageToggle } from "@/components/language-toggle";
 import { SparklesText } from "@/components/ui/sparkelsText";
-import { AuroraText } from "@/components/ui/auroraText";
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -574,9 +572,8 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {t("work.title")}
-            </h2>
+            <SparklesText className="mb-5">{t("work.title")}</SparklesText>
+
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t("work.description")}
             </p>
@@ -648,9 +645,10 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <SparklesText className="mb-5">{t("services.title")}</SparklesText>
+            {/* <h2 className="text-3xl md:text-4xl font-bold mb-6">
               {t("services.title")}
-            </h2>
+            </h2> */}
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t("services.description")}
             </p>
@@ -723,9 +721,12 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <SparklesText className="mb-5">
               {t("testimonials.title")}
-            </h2>
+            </SparklesText>
+            {/* <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {t("testimonials.title")}
+            </h2> */}
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t("testimonials.description")}
             </p>
@@ -798,9 +799,11 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <SparklesText className="mb-5">{t("contact.title")}</SparklesText>
+
+            {/* <h2 className="text-3xl md:text-4xl font-bold mb-6">
               {t("contact.title")}
-            </h2>
+            </h2> */}
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t("contact.description")}
             </p>
@@ -830,7 +833,7 @@ export default function Portfolio() {
                     </div>
                     <div>
                       <p className="font-medium">{t("contact.email")}</p>
-                      <p className="text-muted-foreground">alex@example.com</p>
+                      <p className="text-muted-foreground">khpoly0@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -839,7 +842,7 @@ export default function Portfolio() {
                     </div>
                     <div>
                       <p className="font-medium">{t("contact.phone")}</p>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                      <p className="text-muted-foreground">06 57 67 97 11</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -848,7 +851,9 @@ export default function Portfolio() {
                     </div>
                     <div>
                       <p className="font-medium">{t("contact.location")}</p>
-                      <p className="text-muted-foreground">New York, NY</p>
+                      <p className="text-muted-foreground">
+                        Bordj el Behri, Alger
+                      </p>
                     </div>
                   </div>
                   <div className="flex gap-4 pt-4">
