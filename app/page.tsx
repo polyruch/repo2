@@ -367,8 +367,8 @@ export default function Portfolio() {
               <Image
                 src="/images/profile.jpeg"
                 alt="Tabet Khalil - Profile Picture"
-                width={200}
-                height={200}
+                width={150}
+                height={150}
                 className="rounded-full mx-auto mb-6 border-4 border-primary/20 animate-float object-cover"
                 priority
               />
