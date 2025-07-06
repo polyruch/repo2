@@ -58,17 +58,17 @@ const translations = {
     "education.school1": "University of Boumerdes (UMBB)",
     "education.desc1":
       "Advanced study in mathematical optimization, statistical analysis, and decision-making processes",
-    "education.degree2": "Bachelor's Degree in Applied Mathematics",
-    "education.school2": "University of Boumerdes (UMBB)",
+    // "education.degree2": "Bachelor's Degree in Applied Mathematics",
+    // "education.school2": "University of Boumerdes (UMBB)",
+    // "education.desc2":
+    //   "Comprehensive foundation in mathematical modeling, calculus, linear algebra, and statistical methods",
+    "education.degree2": "Front End Engineer Certificate",
+    "education.school2": "Codecademy",
     "education.desc2":
-      "Comprehensive foundation in mathematical modeling, calculus, linear algebra, and statistical methods",
-    "education.degree3": "Front End Engineer Certificate",
-    "education.school3": "Codecademy",
-    "education.desc3":
       "Comprehensive certification covering React, JavaScript, HTML/CSS, and modern web development practices",
-    "education.degree4": "CS50x Certificate",
-    "education.school4": "Harvard University",
-    "education.desc4":
+    "education.degree3": "CS50x Certificate",
+    "education.school3": "Harvard University",
+    "education.desc3":
       "Introduction to Computer Science covering algorithms, data structures, and programming fundamentals",
 
     // Work Section

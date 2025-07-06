@@ -44,6 +44,7 @@ import { useTheme } from "next-themes";
 import { TypingEffect } from "@/components/typing-effect";
 import { useLanguage } from "@/contexts/language-context";
 import { LanguageToggle } from "@/components/language-toggle";
+import { SparklesText } from "@/components/ui/sparkelsText";
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -204,7 +205,7 @@ export default function Portfolio() {
       school: t("education.school2"),
       year: "2018-2022",
       description: t("education.desc2"),
-      logo: "/images/umbb-logo.png",
+      logo: "/images/codecademy-logo.png",
     },
     {
       degree: t("education.degree3"),
@@ -213,13 +214,13 @@ export default function Portfolio() {
       description: t("education.desc3"),
       logo: "/images/codecademy-logo.png",
     },
-    {
-      degree: t("education.degree4"),
-      school: t("education.school4"),
-      year: "2023",
-      description: t("education.desc4"),
-      logo: "/images/harvard-logo.jpeg",
-    },
+    // {
+    //   degree: t("education.degree4"),
+    //   school: t("education.school4"),
+    //   year: "2023",
+    //   description: t("education.desc4"),
+    //   logo: "/images/harvard-logo.jpeg",
+    // },
   ];
 
   const navigationItems = [
@@ -373,25 +374,27 @@ export default function Portfolio() {
                 priority
               />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 break-words">
-              {t("hero.greeting")}{" "}
+            <h1 className="text-2xl md:text-4xl font-bold mb-6 break-words">
+              Hi there, I'm{" "}
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                {t("hero.name")}
+                Khalil{" "}
               </span>
+              <span>👋</span>
             </h1>
-            <div className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              <p className="mb-2">
-                {t("hero.freelance")}{" "}
-                <TypingEffect
-                  words={[t("hero.role.developer"), t("hero.role.designer")]}
-                  className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent font-bold "
-                />
+            <div className="text-4xl md:text-6xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <p className="mb-4 font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Website designer and developer
+              </p>
+              <p className="text-lg leading-relaxed">
+                I help people and brands reach their goals by designing &
+                building user-centric digital products and interactive
+                experiences
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-full">
               <Button
                 size="lg"
-                className="bg-gradient-to-r dark:text-zinc-300 from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
                 asChild
               >
                 <Link href="#work">{t("hero.viewWork")}</Link>
@@ -422,10 +425,8 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {t("about.title")}
-            </h2>
-            <div className="max-w-3xl mx-auto">
+            <SparklesText>{t("about.title")}</SparklesText>
+            <div className="max-w-3xl mx-auto mt-8">
               <p className="text-lg text-muted-foreground mb-6">
                 {t("about.description1")}
               </p>
@@ -433,6 +434,7 @@ export default function Portfolio() {
                 {t("about.description2")}
               </p>
             </div>
+            <div className="mt-10"></div>
           </motion.div>
         </div>
       </section>
@@ -447,10 +449,11 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <SparklesText>{t("skills.title")}</SparklesText>
+            {/* <h2 className="text-3xl md:text-4xl font-bold mb-6">
               {t("skills.title")}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            </h2> */}
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-7">
               {t("skills.description")}
             </p>
           </motion.div>
@@ -512,10 +515,12 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <SparklesText>{t("education.title")}</SparklesText>
+            {/* <h2 className="text-3xl md:text-4xl font-bold mb-6">
               {t("education.title")}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            </h2> */}
+
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-5">
               {t("education.description")}
             </p>
           </motion.div>
