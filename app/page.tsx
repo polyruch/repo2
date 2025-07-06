@@ -45,6 +45,7 @@ import { TypingEffect } from "@/components/typing-effect";
 import { useLanguage } from "@/contexts/language-context";
 import { LanguageToggle } from "@/components/language-toggle";
 import { SparklesText } from "@/components/ui/sparkelsText";
+import { AuroraText } from "@/components/ui/auroraText";
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -375,7 +376,7 @@ export default function Portfolio() {
               />
             </div>
             <h1 className="text-2xl md:text-4xl font-bold mb-6 break-words">
-              Hi there, I'm{" "}
+              {t("hero.greeting")}
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Khalil{" "}
               </span>
@@ -383,13 +384,9 @@ export default function Portfolio() {
             </h1>
             <div className="text-4xl md:text-6xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               <p className="mb-4 font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Website designer and developer
+                {t("hero.role")}
               </p>
-              <p className="text-lg leading-relaxed">
-                I help people and brands reach their goals by designing &
-                building user-centric digital products and interactive
-                experiences
-              </p>
+              <p className="text-lg leading-relaxed">{t("hero.description")}</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-full">
               <Button
@@ -450,9 +447,6 @@ export default function Portfolio() {
             className="text-center mb-16"
           >
             <SparklesText>{t("skills.title")}</SparklesText>
-            {/* <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {t("skills.title")}
-            </h2> */}
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-7">
               {t("skills.description")}
             </p>
@@ -516,9 +510,6 @@ export default function Portfolio() {
             className="text-center mb-16"
           >
             <SparklesText>{t("education.title")}</SparklesText>
-            {/* <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {t("education.title")}
-            </h2> */}
 
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-5">
               {t("education.description")}
@@ -932,9 +923,10 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="py-8 border-t">
-        <div className="container mx-auto px-4 text-center max-w-full">
+        <div className="container flex flex-col mx-auto px-4 text-center max-w-full">
+          <p className="text-slate-200 mb-3">Made with ❤️ by Khalil</p>
           <p className="text-muted-foreground">
-            © {new Date().getFullYear()} {t("hero.name")}. {t("footer.rights")}
+            © {new Date().getFullYear()} {t("footer.rights")}
           </p>
         </div>
       </footer>

@@ -28,12 +28,11 @@ const translations = {
     "nav.portfolio": "Portfolio",
 
     // Hero Section
-    "hero.greeting": "Hi, I am",
+    "hero.greeting": "Hi there, I'm ",
     "hero.name": "Khalil",
-    "hero.role.developer": "Developer",
-    "hero.role.designer": "Designer",
-    "hero.freelance": "A Freelance Web",
-    "hero.description": "crafting beautiful, functional digital experiences",
+    "hero.role": "Website designer and developer",
+    "hero.description":
+      "I help people and brands reach their goals by designing & building user-centric digital products and interactive experiences",
     "hero.viewWork": "View My Work",
     "hero.getInTouch": "Get In Touch",
 
@@ -171,10 +170,8 @@ const translations = {
     "nav.portfolio": "Portfolio",
 
     // Hero Section
-    "hero.greeting": "Salut, je suis",
-    "hero.name": "Tabet Khalil",
-    "hero.role.developer": "Développeur",
-    "hero.role.designer": "Designer",
+    "hero.greeting": "Salut, je suis ",
+    "hero.role": "Développeur et Designer Web",
     "hero.freelance": "Web",
     "hero.description":
       "créant des expériences numériques belles et fonctionnelles",
@@ -184,9 +181,9 @@ const translations = {
     // About Section
     "about.title": "À Propos de Moi",
     "about.description1":
-      "Je suis un développeur web et designer freelance passionné avec plus de 4 ans d'expérience dans la création de solutions numériques qui combinent un design magnifique avec une fonctionnalité puissante. Je me spécialise dans les technologies web modernes et j'adore donner vie aux idées à travers le code.",
+      "Bonjour, je m'appelle Tabet Khalil. Je suis développeur et designer web freelance, passionné par la création de sites web modernes, épurés et rapides. Je me spécialise dans les solutions Next.js et Strapi CMS, en concevant des expériences numériques à la fois esthétiques, performantes et centrées sur l’utilisateur.",
     "about.description2":
-      "Quand je ne code pas, vous pouvez me trouver en train d'explorer de nouvelles tendances de design, de contribuer à des projets open-source, ou de partager mes connaissances avec la communauté des développeurs.",
+      "Quand je ne code pas, vous me trouverez probablement à la salle de sport, en train de résoudre des probléme complexes ou de travailler sur des projets personnels.",
 
     // Skills Section
     "skills.title": "Compétences & Expertise",
