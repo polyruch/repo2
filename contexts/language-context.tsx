@@ -74,12 +74,12 @@ const translations = {
     "work.title": "My Work",
     "work.description":
       "Here are some of my recent projects that showcase my skills and creativity",
-    "work.project1.title": "E-Commerce Platform",
+    "work.project1.title": "Mazaji",
     "work.project1.description":
-      "Full-stack e-commerce solution with payment integration and admin dashboard",
-    "work.project2.title": "Task Management App",
+      "Full-stack Mood Tracking app, Made with Nextjs and Firebase for back-end.",
+    "work.project2.title": "Dfl-Collection",
     "work.project2.description":
-      "Collaborative project management tool with real-time updates",
+      "Ecommerce Cloths Store with custom Telegram Notification, made with Nextjs for front-end and Strapi CMS for backend.",
     "work.project3.title": "Portfolio Website",
     "work.project3.description":
       "Modern portfolio website with animations and responsive design",
@@ -213,20 +213,20 @@ const translations = {
       "Introduction à l'informatique couvrant les algorithmes, structures de données et fondamentaux de programmation",
 
     // Work Section
-    "work.title": "Mon Travail",
+    "work.title": "My Work",
     "work.description":
-      "Voici quelques-uns de mes projets récents qui mettent en valeur mes compétences et ma créativité",
-    "work.project1.title": "Plateforme E-Commerce",
+      "Here are some of my recent projects that showcase my skills and creativity",
+    "work.project1.title": "Mazaji",
     "work.project1.description":
-      "Solution e-commerce full-stack avec intégration de paiement et tableau de bord admin",
-    "work.project2.title": "App de Gestion de Tâches",
+      "Full-stack Mood Tracking app, Made with Nextjs and Firebase for back-end.",
+    "work.project2.title": "Dfl-Collection",
     "work.project2.description":
-      "Outil de gestion de projet collaboratif avec mises à jour en temps réel",
-    "work.project3.title": "Site Web Portfolio",
+      "Ecommerce Cloths Store with custom Telegram Notification, made with Nextjs for front-end and Strapi CMS for backend.",
+    "work.project3.title": "Portfolio Website",
     "work.project3.description":
-      "Site web portfolio moderne avec animations et design responsive",
+      "Modern portfolio website with animations and responsive design",
     "work.code": "Code",
-    "work.liveDemo": "Démo Live",
+    "work.liveDemo": "Live Demo",
 
     // Services Section
     "services.title": "Mes Services",

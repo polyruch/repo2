@@ -168,27 +168,27 @@ export default function Portfolio() {
     {
       title: t("work.project1.title"),
       description: t("work.project1.description"),
-      image: "/placeholder.svg?height=300&width=400",
-      tech: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-      github: "#",
-      live: "#",
+      image: "/images/Mazaji.png",
+      tech: ["Next.js", "Tailwind", "Firebase"],
+      github: "https://github.com/polyruch/Mazajii",
+      live: "https://mazaji.netlify.app/",
     },
     {
       title: t("work.project2.title"),
       description: t("work.project2.description"),
-      image: "/placeholder.svg?height=300&width=400",
-      tech: ["React", "Socket.io", "MongoDB", "Express"],
-      github: "#",
-      live: "#",
+      image: "/images/dfl-logo.jpg",
+      tech: ["Nextjs", "StrapiCMS", "PostgreSQL", "TailwindCSS"],
+      github: "",
+      live: "https://dfl-store.netlify.app/",
     },
-    {
-      title: t("work.project3.title"),
-      description: t("work.project3.description"),
-      image: "/placeholder.svg?height=300&width=400",
-      tech: ["Next.js", "Framer Motion", "Tailwind", "TypeScript"],
-      github: "#",
-      live: "#",
-    },
+    // {
+    //   title: t("work.project3.title"),
+    //   description: t("work.project3.description"),
+    //   image: "/placeholder.svg?height=300&width=400",
+    //   tech: ["Next.js", "Framer Motion", "Tailwind", "TypeScript"],
+    //   github: "#",
+    //   live: "#",
+    // },
   ];
 
   const education = [
@@ -646,9 +646,6 @@ export default function Portfolio() {
             className="text-center mb-16"
           >
             <SparklesText className="mb-5">{t("services.title")}</SparklesText>
-            {/* <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {t("services.title")}
-            </h2> */}
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t("services.description")}
             </p>
@@ -712,7 +709,7 @@ export default function Portfolio() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20">
+      {/*<section id="testimonials" className="py-20">
         <div className="container mx-auto px-4 max-w-full">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -726,7 +723,7 @@ export default function Portfolio() {
             </SparklesText>
             {/* <h2 className="text-3xl md:text-4xl font-bold mb-6">
               {t("testimonials.title")}
-            </h2> */}
+            </h2> 
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t("testimonials.description")}
             </p>
